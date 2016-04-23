@@ -15,6 +15,12 @@ install:
   - npm install
   - bower install
 
+before_script:
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+
 script:
   - gulp
+
+after_script:
   - docker build -t hypheed/hypheed-webstub .
+  - docker push hypheed/hypheed-webstub
