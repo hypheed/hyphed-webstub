@@ -160,11 +160,12 @@ gulp.task('client:build', ['html', 'styles'], function () {
     .pipe(jsFilter)
     .pipe($.ngAnnotate())
     .pipe($.uglify())
+    .pipe($.rev())
     .pipe(jsFilter.restore())
     .pipe(cssFilter)
     .pipe($.minifyCss({cache: true}))
-    .pipe(cssFilter.restore())
     .pipe($.rev())
+    .pipe(cssFilter.restore())
     .pipe($.revReplace())
     .pipe(gulp.dest(yeoman.dist));
 });
