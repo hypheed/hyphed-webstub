@@ -21,9 +21,6 @@ angular .module('hypheedWebstubApp', ['ui.router', 'ngResource'])
                         },
                         'content': {
                             templateUrl : 'views/home.html'
-                        },
-                        'footer': {
-                            templateUrl : 'views/footer.html',
                         }
                     }
                 });
