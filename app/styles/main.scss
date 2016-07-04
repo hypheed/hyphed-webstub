@@ -27,10 +27,6 @@ body {
   padding: 10px 10px 10px 10px;
 }
 
-.media-body {
-  vertical-align: middle;
-}
-
 .row-header {
   margin: 0px auto;
   padding: 0px 0px;
@@ -41,8 +37,8 @@ body {
   padding: 20px 0px;
 }
 
-.img-center {
-  margin:0 auto;
+.img-minsized {
+  min-width: 300px;
 }
 
 .color-primary-0 { color: #297B48 }	/* Main Primary color */
